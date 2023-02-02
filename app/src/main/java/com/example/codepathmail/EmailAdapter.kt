@@ -15,6 +15,7 @@ class EmailAdapter (private val emails: List<Email>): RecyclerView.Adapter<Email
         val titleTextView: TextView
         val summaryTextView: TextView
 
+
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each sub-view
         init {
@@ -22,6 +23,7 @@ class EmailAdapter (private val emails: List<Email>): RecyclerView.Adapter<Email
             senderTextView = itemView.findViewById(R.id.senderTv)
             titleTextView = itemView.findViewById(R.id.titleTv)
             summaryTextView = itemView.findViewById(R.id.summaryTv)
+
         }
     }
 

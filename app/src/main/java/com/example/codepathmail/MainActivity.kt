@@ -3,6 +3,7 @@ package com.example.codepathmail
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codepathmail.EmailFetcher.Companion.getNext5Emails
@@ -33,5 +34,6 @@ class MainActivity : AppCompatActivity() {
             adapter.notifyDataSetChanged()
 
         }
+
     }
 }

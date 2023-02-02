@@ -4,14 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/senderTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textSize="20sp"
+        android:padding="2dp"
+        android:textSize="15sp"
+        android:typeface="serif"
+        tools:textStyle="bold"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="SENDER"/>
@@ -20,7 +24,10 @@
         android:id="@+id/titleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="2dp"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/senderTv"
         tools:text="Title"/>
@@ -29,8 +36,11 @@
         android:id="@+id/summaryTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="2dp"
+        android:textSize="15sp"
         android:lines="1"
+        android:textStyle="bold"
+        android:typeface="serif"
         android:ellipsize="end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTv"
