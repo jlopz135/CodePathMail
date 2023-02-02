@@ -2,8 +2,11 @@ package com.example.codepathmail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.codepathmail.EmailFetcher.Companion.getNext5Emails
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var emails: List<Email>
@@ -22,5 +25,13 @@ class MainActivity : AppCompatActivity() {
         emailsRv.adapter = adapter
         // Set layout manager to position the items
         emailsRv.layoutManager = LinearLayoutManager(this)
+
+        findViewById<Button>(R.id.loadMoreButton).setOnClickListener{
+            val fetch = getNext5Emails()
+            (emails as MutableList<Email>).addAll(fetch)
+
+            adapter.notifyDataSetChanged()
+
+        }
     }
 }
